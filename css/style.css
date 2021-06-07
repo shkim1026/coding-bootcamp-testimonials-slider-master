@@ -1,0 +1,205 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark Blue: hsl(240, 38%, 20%)
+- Grayish Blue: hsl(240, 18%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 32px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 300, 500, 700 */
+
+
+.slideshow-container {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-image: url(../images/pattern-curve.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 7rem;
+    margin: 0 auto;
+}
+.testimonial-slide {
+    display: none;
+    padding: 0 26px;
+    padding-top: 1rem;
+}
+.slide-button-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(40vw, 74vw);
+}
+.prev {
+    background-color: hsl(0, 0%, 100%);
+    padding: 12px 15px 12px 15px;
+    border-radius: 25px 0px 0px 25px;
+}
+.next {
+    background-color: hsl(0, 0%, 100%);
+    padding: 12px 15px 12px 15px;
+    border-radius: 0px 25px 25px 0px;
+}
+.prev img,
+.next img {
+    height: 15px;
+}
+.img-container {
+    background-image: url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 94.26%;
+    background-position: 50% 50%;
+}
+.img {
+    width: calc(100% - 33vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(26%, 18%);
+    border-radius: 5px;
+    box-shadow: -1px 39px 65px -45px #40318c;
+}
+.img::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    left:0;
+    box-shadow: 5px 5px 5px;
+    border-radius: 5px;
+}
+.quote,
+.name {
+    color: hsl(240, 38%, 20%);
+}
+.quote {
+    background-repeat: no-repeat;
+    background-size: 65px;
+    background-position-x: center;
+    background-image: url(../images/pattern-quotes.svg);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 2rem auto;
+    margin-bottom: 1rem;
+    padding: 0 8px;
+    padding-top: 2rem;
+}
+.name {
+    font-weight: 700;
+}
+.job-title {
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+    margin-top: 3px;
+}
+
+.display {
+    display: block !important;
+}
+
+@media (min-width: 768px) { 
+    .display {
+        display: grid !important;
+        grid-template-columns: 50% 50%;
+    }
+    .slideshow-container {
+        background-size: 50vw;
+        background-position: bottom left;
+        text-align: initial;
+        padding-bottom: 5rem;
+    }
+    .testimonial-slide {
+        padding-right: 4rem;
+    }
+    .img-container {
+        grid-column-start: 2;
+    }
+    .img {
+        width: calc(100% - 64vw);
+        left: initial;
+        right: 0;
+        transform: translate(-29%, 16%);
+    }
+    .quote-quotee-container {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        align-self: center;
+        transform: translateX(9vw);
+    }
+    .quote {
+        padding: 0;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        background-position-x: 3rem;
+        margin: 0;
+        font-size: 17px;
+    }
+    .quotee {
+        display: grid;
+        grid-template-columns: max-content max-content;
+    }
+    .job-title {
+        margin-top: 0;
+        padding-left: 1rem;
+    }
+    .slide-button-container {
+        right: 0;
+        transform: translate(-34vw, 39vw);
+    }
+}
+
+@media (min-width: 1200px) { 
+    .testimonial-slide {
+        margin: 0 auto;
+    }
+    .slide-button-container {
+        transform: translate(-35vw, 40vw);
+        padding-bottom: 8rem;
+    }
+    .prev {
+        padding: 18px 20px 18px 18px;
+        border-radius: 40px 0px 0px 40px;
+    }
+    .next {
+        padding: 18px 18px 18px 20px;
+        border-radius: 0px 40px 40px 0px;
+    }
+    .prev img, 
+    .next img {
+        height: 18px;
+    }
+    .quote {
+        font-size: 32px;
+        line-height: 41px;
+        background-position-x: 6rem;
+        background-position-y: 8%;
+        background-size: 8vw;
+        padding-top: 5rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
+    .name,
+    .job-title {
+        font-size: 21px;
+    }
+}
